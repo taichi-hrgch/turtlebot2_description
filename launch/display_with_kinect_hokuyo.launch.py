@@ -11,7 +11,6 @@ def generate_launch_description():
     robot_state_publisher_node = launch_ros.actions.Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        # add prefix and it obtains the value of prefix from launch arguments
         parameters=[{'robot_description': Command([
             'xacro ', LaunchConfiguration('model'),
         ])}]
