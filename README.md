@@ -19,7 +19,7 @@ ros2 launch turtlebot2_description display_with_kinect_hokuyo.launch.py
 ```
 
 ### Changing the prefix
-By default, the robot's prefix is set to turtlebot/. To change it, edit the prefix declaration in the robots/kobuki_hexagons_kinect_hokuyo.xacro file:
+By default, the robot's prefix is set to `turtlebot/`. To change it, edit the prefix declaration in the `robots/kobuki_hexagons_kinect_hokuyo.xacro` file:
 ```
 <xacro:property name="prefix" value="your_custom_prefix"/>
 ```
