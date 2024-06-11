@@ -15,7 +15,7 @@ This repository provides the ROS 2 description for TurtleBot2 with Hokuyo and Ki
 To display the TurtleBot2 in RViz with the specified sensor configuration:
 
 ```
-ros2 launch turtlebot2_description display_with_hokuyo_kinect.launch.py
+ros2 launch turtlebot2_description display_with_kinect_hokuyo.launch.py
 ```
 
 ### Changing the prefix
