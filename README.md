@@ -7,7 +7,7 @@ The "main" repository does not contain a prefix. "with prefix" repository has pr
 
 - **Reference:** Edited based on [TurtleBot2 Description](https://github.com/igrak34/turtlebot2-ros2/tree/humble-devel/turtlebot2_description)
 - **Customizable Sensor Positions:** The positions of the Hokuyo and Kinect sensors can be adjusted to match your robot's configuration.
-- (**Prefix Specification:** The prefix for the robot can be freely specified. By default, it is set to `turtlebot/`.)
+- **Prefix Specification:** The prefix for the robot can be freely specified. By default, it is set to `turtlebot/`.
 
 ## Usage
 
