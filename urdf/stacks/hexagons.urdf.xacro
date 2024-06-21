@@ -11,12 +11,12 @@
   <!-- Xacro macros -->
   <!-- Pole macros -->
   <xacro:macro name="stack_bottom_pole" params="parent number x_loc y_loc z_loc roll=0.0 pitch=0.0 yaw=0.0">
-    <joint name="${prefix}pole_bottom_${number}_joint" type="fixed">
+    <joint name="pole_bottom_${number}_joint" type="fixed">
       <origin xyz="${x_loc} ${y_loc} ${z_loc}" rpy="${roll} ${pitch} ${yaw}"/>
       <parent link="${parent}"/>
-      <child link="${prefix}pole_bottom_${number}_link"/>
+      <child link="pole_bottom_${number}_link"/>
     </joint>
-    <link name="${prefix}pole_bottom_${number}_link">
+    <link name="pole_bottom_${number}_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
@@ -40,12 +40,12 @@
   </xacro:macro>
   
   <xacro:macro name="stack_middle_pole" params="parent number x_loc y_loc z_loc roll=0.0 pitch=0.0 yaw=0.0">
-    <joint name="${prefix}pole_middle_${number}_joint" type="fixed">
+    <joint name="pole_middle_${number}_joint" type="fixed">
       <origin xyz="${x_loc} ${y_loc} ${z_loc}" rpy="${roll} ${pitch} ${yaw}" />
       <parent link="${parent}"/>
-      <child link="${prefix}pole_middle_${number}_link"/>
+      <child link="pole_middle_${number}_link"/>
     </joint>
-    <link name="${prefix}pole_middle_${number}_link">
+    <link name="pole_middle_${number}_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 ${M_PI} 0"/>
         <geometry>
@@ -69,12 +69,12 @@
   </xacro:macro>
 
   <xacro:macro name="stack_top_pole" params="parent number x_loc y_loc z_loc roll=0.0 pitch=0.0 yaw=0.0">
-    <joint name="${prefix}pole_top_${number}_joint" type="fixed">
+    <joint name="pole_top_${number}_joint" type="fixed">
       <origin xyz="${x_loc} ${y_loc} ${z_loc}" rpy="${roll} ${pitch} ${yaw}"/>
       <parent link="${parent}"/>
-      <child link="${prefix}pole_top_${number}_link"/>
+      <child link="pole_top_${number}_link"/>
     </joint>
-    <link name="${prefix}pole_top_${number}_link">
+    <link name="pole_top_${number}_link">
       <visual>
         <origin xyz=" 0 0 0" rpy="0 0 0"/>
         <geometry>
@@ -98,12 +98,12 @@
   </xacro:macro>
 
   <xacro:macro name="stack_3d_sensor_pole" params="parent number x_loc y_loc z_loc roll=0.0 pitch=0.0 yaw=0.0">
-    <joint name="${prefix}pole_kinect_${number}_joint" type="fixed">
+    <joint name="pole_kinect_${number}_joint" type="fixed">
       <origin xyz="${x_loc} ${y_loc} ${z_loc}" rpy="${roll} ${pitch} ${yaw}"/>
       <parent link="${parent}"/>
-      <child link="${prefix}pole_kinect_${number}_link"/>
+      <child link="pole_kinect_${number}_link"/>
     </joint>
-    <link name="${prefix}pole_kinect_${number}_link">
+    <link name="pole_kinect_${number}_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
@@ -139,12 +139,12 @@
     <xacro:stack_bottom_pole parent="${parent}" number="4" x_loc= "0.055" y_loc="-0.120" z_loc="0.1028"/>
     <xacro:stack_bottom_pole parent="${parent}" number="5" x_loc="-0.055" y_loc="-0.120" z_loc="0.1028"/>
     
-    <joint name="${prefix}plate_bottom_joint" type="fixed">
+    <joint name="plate_bottom_joint" type="fixed">
       <origin xyz="0.02364 0.0 0.1306" rpy="0 0 0"/>
       <parent link="${parent}"/>
-      <child link="${prefix}plate_bottom_link"/>
+      <child link="plate_bottom_link"/>
     </joint>  
-    <link name="${prefix}plate_bottom_link">
+    <link name="plate_bottom_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
@@ -171,12 +171,12 @@
     <xacro:stack_middle_pole parent="${parent}" number="2" x_loc="-0.0381" y_loc= "0.1505" z_loc="0.1640"/>
     <xacro:stack_middle_pole parent="${parent}" number="3" x_loc="-0.0381" y_loc="-0.1505" z_loc="0.1640"/>
     
-    <joint name="${prefix}plate_middle_joint" type="fixed">
+    <joint name="plate_middle_joint" type="fixed">
       <origin xyz="-0.01364 0.0 0.1874" rpy="0 0 0"/>
       <parent link="${parent}"/>
-      <child link="${prefix}plate_middle_link"/>
+      <child link="plate_middle_link"/>
     </joint>  
-    <link name="${prefix}plate_middle_link">
+    <link name="plate_middle_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
@@ -207,12 +207,12 @@
     <xacro:stack_3d_sensor_pole parent="${parent}" number="0" x_loc="0.1024" y_loc= "0.098" z_loc="0.2372"/>
     <xacro:stack_3d_sensor_pole parent="${parent}" number="1" x_loc="0.1024" y_loc="-0.098" z_loc="0.2372"/>
     
-    <joint name="${prefix}plate_top_joint" type="fixed">
+    <joint name="plate_top_joint" type="fixed">
       <origin xyz="-0.01364 0.0  0.3966" rpy="0 0 0"/>
       <parent link="${parent}"/>
-      <child link="${prefix}plate_top_link"/>
+      <child link="plate_top_link"/>
     </joint>  
-    <link name="${prefix}plate_top_link">
+    <link name="plate_top_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>

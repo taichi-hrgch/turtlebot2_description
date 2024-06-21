@@ -19,12 +19,12 @@
     </material>
 
     <xacro:macro name="sensor_hokuyo" params="parent">
-        <joint name="${prefix}laser_joint" type="fixed">
+        <joint name="laser_joint" type="fixed">
             <origin xyz="${laser_px} ${laser_py} ${laser_pz}" rpy="0 0 0" />
             <parent link="${parent}" />
-            <child link="${prefix}laser" />
+            <child link="laser" />
         </joint>
-        <link name="${prefix}laser">
+        <link name="laser">
             <inertial>
                 <!-- change z into 0.025, this is the half of the box size -->
                 <origin xyz="0 0 0.025" rpy="0 0 0" />
