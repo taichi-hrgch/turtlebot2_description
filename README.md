@@ -1,6 +1,6 @@
 # TurtleBot2 ROS 2 Description
 
-This repository provides the ROS 2 description for TurtleBot2 with Hokuyo and Kinect sensors. You can visualize the robot in RViz using the provided launch files.\\
+This repository provides the ROS 2 description for TurtleBot2 with Hokuyo and Kinect sensors. You can visualize the robot in RViz using the provided launch files.  
 The "main" repository does not contain a prefix. "with prefix" repository has prefixes added, but the lidar does not work.
 
 ## Features
